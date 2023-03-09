@@ -66,14 +66,13 @@ PLEXOSClassGroup(e::Node, ::AbstractDataset) =
 struct PLEXOSClass
     name::String
     classgroup::PLEXOSClassGroup
-    state::Int
+    state::Union{Int,Nothing}
 end
 
 PLEXOSClass(e::Node, d::AbstractDataset) =
     PLEXOSClass(getchildtext("name", e),
                 d.classgroups[getchildint("class_group_id", e)],
                 getchildint("state", e))
-
 
 struct PLEXOSCategory
     name::String

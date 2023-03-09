@@ -31,10 +31,24 @@ end
 
 function getchildtext(name::String, e::Node)
     resultnode = findfirst("x:" * name, e, ["x"=>namespace(e)])
-    isnothing(resultnode) && error("$e does not have child $name")
+    isnothing(resultnode) && return
     return nodecontent(resultnode)
 end
 
-getchildfloat(name::String, e::Node) = parse(Float64, getchildtext(name, e))
-getchildint(name::String, e::Node) = parse(Int, getchildtext(name, e))
-getchildbool(name::String, e::Node) = parse(Bool, getchildtext(name, e))
+function getchildfloat(name::String, e::Node)
+    text = getchildtext(name, e)
+    isnothing(text) && return
+    return parse(Float64, text)
+end
+
+function getchildint(name::String, e::Node)
+    text = getchildtext(name, e)
+    isnothing(text) && return
+    return parse(Int, text)
+end
+
+function getchildbool(name::String, e::Node)
+    text = getchildtext(name, e)
+    isnothing(text) && return
+    return parse(Bool, text)
+end
