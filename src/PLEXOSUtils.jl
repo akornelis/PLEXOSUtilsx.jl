@@ -1,7 +1,7 @@
 module PLEXOSUtils
 
 import EzXML: Document, eachelement, namespace, Node, nodecontent, parsexml
-import InfoZIP: Archive, open_zip
+import InfoZIPx: Archive, open_zip
 
 export open_plexoszip, PLEXOSSolutionDataset, PLEXOSSolutionDatasetSummary
 
