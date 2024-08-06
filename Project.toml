@@ -1,7 +1,7 @@
-name = "PLEXOSUtils"
-uuid = "05faf425-d728-49da-9df3-01114615952c"
+name = "PLEXOSUtilsx"
+uuid = "d19dde98-b8c4-4cd6-bed4-e0b4b8aa10a8"
 authors = ["Gord Stephen <gord.stephen@nrel.gov>"]
-version = "0.1.9"
+version = "0.1.10"
 
 [deps]
 EzXML = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"
