@@ -1,9 +1,10 @@
-module PLEXOSUtils
+module PLEXOSUtilsx
 
 import EzXML: Document, eachelement, namespace, Node, nodecontent, parsexml
 import InfoZIPx: Archive, open_zip
 
 export open_plexoszip, PLEXOSSolutionDataset, PLEXOSSolutionDatasetSummary
+
 
 struct PLEXOSTable
 
